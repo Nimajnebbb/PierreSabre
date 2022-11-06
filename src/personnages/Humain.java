@@ -27,17 +27,26 @@ public class Humain {
 		parler("Bonjour ! Je m'appelle " + getNom() + " et j'aime boire du " + boisson + ".");
 	}
 	
+	public void gagnerArgent(int gain) {
+		argent += gain;
+	}
+	
+	public void perdreArgent(int perte) {
+		argent -= perte;
+	}
+	
 	public void boire() {
 		parler("Mmmm, un bon verre de "+ boisson +" ! GLOUPS !");
 	}
 	
 	public void acheter(String bien, int prix) {
 		if (prix <= argent) {
-			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir " + bien +" à " + prix + " sous");
+			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir " + bien +" à " + prix + " sous.");
 			if (bien == "une boisson") this.boire();
-			argent -= prix;
+			perdreArgent(prix);
 		} else {
-			parler("Je n'ai que " + argent + " sous en poche. Je ne peux même pas m'offrir " + bien +" à " + prix + " sous");
+			parler("Je n'ai que " + argent + " sous en poche. Je ne peux même pas m'offrir " + bien +" à " + prix + " sous.");
 		}
 	}
+	
 }

@@ -9,13 +9,13 @@ public class Commercant extends Humain {
 	
 	public int seFaireExtorquer() {
 		int argentPerdu = argent;
-		argent = 0;
+		perdreArgent(argent);
 		parler("J’ai tout perdu! Le monde est trop injuste...");
 		return argentPerdu;
 	}
 	
 	public void recevoir(int argent) {
-		this.argent += argent;
+		gagnerArgent(argent);
 		parler(argent + " sous ! Je te remercie généreux donateur!");
 	}
 }
