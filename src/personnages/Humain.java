@@ -74,10 +74,12 @@ public class Humain {
 	
 	public void listerConnaissance() {
 		parler("Je connais beaucoup de monde dont : ");
-		for (int i=0;i<nbConnaissance;i++) {
-			System.out.print(" " + memoire[i].getNom());
-			if (i < nbConnaissance-1) {
-				System.out.print(",");
+		for (int i=0;i<30;i++) {
+			if (memoire[i] != null) {
+				System.out.print(" " + memoire[i].getNom());
+				if (memoire[i+1] != null) {
+					System.out.print(",");
+				}
 			}
 		}
 		System.out.println("");
