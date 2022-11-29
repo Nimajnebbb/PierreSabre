@@ -36,9 +36,9 @@ public class Traitre extends Samourai{
 			parler("Je ne peux faire ami-ami avec personne car je ne connais personne ! Snif.");
 		} else {
 			// Génération d'un humain connu aléatoire
-			int has = 0 + (int)(Math.random() * (nbConnaissance - 0));
+			int hasard = 0 + (int)(Math.random() * (nbConnaissance - 0));
 //			System.out.println(nbConnaissance + " nb aléa: "+ has);
-			Humain humain = memoire[has];
+			Humain humain = memoire[hasard];
 //			System.out.println(humain.getNom());
 			
 			int don = argent*(1/20);

@@ -58,7 +58,8 @@ public class Humain {
 		memoriser(autreHumain);
 	}
 
-	private void memoriser(Humain humain) {
+	protected void memoriser(Humain humain) {
+//		System.out.println("Humain class");
 		if (nbConnaissance==30) {
 			nbConnaissance = 0;
 		} 
